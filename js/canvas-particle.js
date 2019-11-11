@@ -1,7 +1,7 @@
 var CanvasParticle=(function(){function getElementByTag(name){return document.getElementsByTagName(name);}
 function getELementById(id){return document.getElementById(id);}
 function canvasInit(canvasConfig){canvasConfig=canvasConfig||{};var html=getElementByTag("html")[0];var body=document.getElementById("mydiv");var canvasObj=document.createElement("canvas");var canvas={element:canvasObj,points:[],config:{vx:canvasConfig.vx||4,vy:canvasConfig.vy||4,height:canvasConfig.height||2,width:canvasConfig.width||2,count:canvasConfig.count||100,color:canvasConfig.color||"121, 162, 185",stroke:canvasConfig.stroke||"130,255,255",dist:canvasConfig.dist||6000,e_dist:canvasConfig.e_dist||20000,max_conn:10}};if(canvas.element.getContext("2d")){canvas.context=canvas.element.getContext("2d");}else{return null;}
-body.style.padding="0";body.style.margin="0";body.appendChild(canvas.element);canvas.element.style="position: fixed; top: 0; left: 0; z-index: -1;";canvasSize(canvas.element);window.onresize=function(){canvasSize(canvas.element);}
+body.style.padding="0";body.style.margin="0";body.appendChild(canvas.element);canvas.element.style="position: relative; top: 0; left: 0; z-index: -1;";canvasSize(canvas.element);window.onresize=function(){canvasSize(canvas.element);}
 body.onmousemove=function(e){var event=e||window.event;canvas.mouse={x:event.clientX,y:event.clientY}}
 document.onmouseleave=function(){canvas.mouse=undefined;}
 setInterval(function(){drawPoint(canvas);},40);}
