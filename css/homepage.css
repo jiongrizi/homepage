@@ -13,6 +13,10 @@ canvas {
   width: 100%;
 }
 
+img {
+  width: 100%;
+}
+
 .btn {
   display: inline-block;
   color: rgba(255,255,255,0.7);
@@ -72,13 +76,69 @@ canvas {
 }
 .parallax-bg {
   position: relative;
-  background-image: url('../images/earth.jpg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  height: 50vw;
-  top: -100%;
+  /*background-image: url('../images/earth.jpg');*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: contain;*/
+  /*background-position: center;*/
+  /*height: 50vw;*/
+  /*top: -100%;*/
+  text-align: center;
 }
+.parallax-bg img{
+  max-width: 1200px;
+}
+
+.parallax-mask {
+  position: absolute;
+  top: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+}
+
+.mask-svg {
+  position: relative;
+  width: 200px;
+  display: inline-block;
+  padding: 40px;
+}
+
+.mask-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.svg-text {
+  position: absolute;
+  width: 200px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  color: #ffffff;
+  transition: all 1s ease;
+}
+
+.svg-animate {
+  stroke-dashoffset: 283px;
+  stroke-dasharray: 283px;
+  transition: all 1s ease;
+}
+
+
+.mask-svg:hover .svg-animate {
+  stroke-dasharray: 568px;
+  transition: all 1s ease;
+}
+
+.mask-svg:hover .svg-text {
+  color: #20bad5;
+  transition: all 1s ease;
+}
+
+
 .point-container {
   display: flex;
   justify-content: space-around;

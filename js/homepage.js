@@ -23,7 +23,7 @@ window.onload = function() {
   var controller = new ScrollMagic.Controller();
 
   var tween = new TimelineMax()
-    .to('.parallax-bg', 10, { y: '50%' })
+    .to('.parallax-bg img', 10, { y: '-50%' })
 
 
   var scene = new ScrollMagic.Scene({
