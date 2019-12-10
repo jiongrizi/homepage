@@ -7,39 +7,31 @@ window.onload = function() {
   var docWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   var controller = new ScrollMagic.Controller();
 
-  // var tween = new TimelineMax()
-  //   .to('.parallax-bg img', 10, { y: '-50%' })
+  var tween = new TimelineMax()
+    .to('.parallax-bg img', 10, { y: '-50%' })
 
-  // var scene = new ScrollMagic.Scene({
-  //   triggerElement: ".section-parallax",
-  //   triggerHook: 'onEnter',
-  //   duration: docHeight + document.querySelector('.section-parallax').offsetHeight
-  // })
-  //   .setTween(tween)
-  //   .addTo(controller);
+  var scene = new ScrollMagic.Scene({
+    triggerElement: ".section-parallax",
+    triggerHook: 'onEnter',
+    duration: docHeight + document.querySelector('.section-parallax').offsetHeight
+  })
+    .setTween(tween)
+    .addTo(controller);
 
   function tweenFn(container) {
     return new TimelineMax()
       .add('Start')
       .to(container + ' .font-headline-4', 1, { y: 0, opacity: 1 }, 'Start')
       .to(container + ' .font-subtitle', 1, { y: 0, opacity: 1 }, "-=0.5")
-      //.to(container + ' .ant-image', 1, { y: 0, opacity: 1 }, 'Start')
-      .to(container + ' .button-container', 1, { y: 0, opacity: 1 }, "-=0.5")
+      .to(container + ' .ant-image', 1, { y: 0, opacity: 1 }, 'Start')
   }
 
-  new ScrollMagic.Scene({
-    triggerElement: ".section-point-1",
-    triggerHook: 'onCenter'
-  })
-    .setTween(tweenFn(".section-point-1"))
-    .addTo(controller);
-
-  for(var i=2; i <= 5; i++) {
+  for(var i=1; i <= 5; i++) {
     new ScrollMagic.Scene({
-      triggerElement: ".point-" + i ,
+      triggerElement: ".section-point-" + i ,
       triggerHook: 'onCenter'
     })
-      .setTween(tweenFn(".point-" + i ))
+      .setTween(tweenFn(".section-point-" + i ))
       .addTo(controller);
   }
 
