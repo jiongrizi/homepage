@@ -268,3 +268,39 @@ img {
     display: none;
   }
 }
+
+
+.section-point-1 {
+  background-image: url(../images/sql.webp);
+  color: #fff;
+}
+.point-bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #010c12;
+}
+.point-2 {
+  background-image: url(../images/cc.webp);
+}
+.point-3 {
+  background-image: url(../images/cyber.webp);
+}
+.point-4 {
+  background-image: url(../images/network.jpg);
+}
+.point-5 {
+  background-image: url(../images/net.jpg);
+}
+.section-point-other {
+  display: flex;
+  flex-wrap: wrap;
+}
+.section-point-other .point-bg {
+  width: 50%;
+}
+.button-container {
+  text-align: center;
+  padding-bottom: 100px;
+  opacity: 0;
+  transform: translate3d(0,100px,0);
+}
