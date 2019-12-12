@@ -44,7 +44,7 @@ window.onload = function() {
     .setTween(
       new TimelineMax()
         .to('.package-bg img', 10, { y: function () {
-          return -(docWidth * 853 / 1280 - 800)
+          return -(docWidth * 300 / 650 - 800)
         } })
     )
     .addTo(controller);
