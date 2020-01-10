@@ -64,7 +64,7 @@ img {
 }
 #particles-js {
   width: 100%;
-  height: 100vh;
+  height: 500px;
   background-color: #159957;
   background-image: linear-gradient(120deg, #155799, #159957);
 }
@@ -262,7 +262,18 @@ img {
   transform: translate3d(0,100px,0);
 }
 
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #f4f5f7;
+  border-top: 1px solid #e2e2e2;
+}
+
 @media screen and (max-width: 735px){
+  #particles-js {
+    height: 100vh;
+  }
+
   .mask-svg{
     width: 50%;
     padding: 20px;
@@ -279,6 +290,7 @@ img {
   }
   .point-container .ant-image {
     width: 100%;
+    padding: 0 20px;
   }
   .package-group {
     flex-wrap: wrap;
@@ -291,7 +303,16 @@ img {
     height: auto;
     background-color: #000;
   }
-  .parallax-bg, .package-bg {
-    display: none;
+
+  .section-point-2 .point-container{
+    flex-wrap: wrap;
+  }
+
+  .section-point-4 .point-container{
+    flex-wrap: wrap;
+  }
+
+  .section-package .package-group{
+    padding: 40px 0;
   }
 }
