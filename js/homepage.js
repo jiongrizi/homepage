@@ -23,6 +23,7 @@ window.onload = function() {
       .add('Start')
       .to(container + ' .font-headline-4', 1, { y: 0, opacity: 1 }, 'Start')
       .to(container + ' .font-subtitle', 1, { y: 0, opacity: 1 }, "-=0.5")
+      .to(container + ' .ant-btn', 1, { y: 0, opacity: 1 }, "-=0.5")
       .to(container + ' .ant-image', 1, { y: 0, opacity: 1 }, 'Start')
       //.to(container + ' .button-container', 1, { y: 0, opacity: 1 }, "-=0.5")
   }
